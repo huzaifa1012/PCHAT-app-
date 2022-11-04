@@ -1,7 +1,147 @@
+body {
+    background: linear-gradient(120deg, rgba(23, 190, 187, 1), rgba(240, 166, 202, 1));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0%;
+    font-family: NEXT ART;
+
+
+}
+header {
+    display: flex;
+    justify-content:space-between;
+    border-bottom: 2px solid white;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.user-profile {
+    padding-top: 5px;
+}
+.user-logout {
+    padding-top: 5px;       
+}
+#logout-icon {
+    width: 30px;
+}
+#user-icon {
+    width: 30px;
+}
+
+
+.header-left {
+    /* display: flex; */
+    /* justify-content: space-around; */
+}
+.main-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-square {
+    border: 2px solid rgba(255, 255, 255, 0.579);
+    border-radius: 10px;
+    width: 70vw;
+    height: 80%;
+    padding: 20px;
+    background-color: rgba(240, 248, 255, 0.481);
+}
+
+
+.flex-wrap {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
 h1 {
+    color: white;
+    font-size: 50px;
     margin: 0%;
 }
-li {
-    color: red;
+
+.div {
+    overflow-y: scroll;
+
+}
+
+
+#main-ul {
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.27);
+    padding: 5px;
+    border-radius: 5px;
+}
+#main-ul:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.122);
+
+}
+
+#li-name {
+    /* color: red; */
+    font-size: 20px;
+    margin: 2px 0px 2px 2px;
     list-style: none;
 }
+#li-name:hover{ 
+}
+#li-email {
+    color: rgba(0, 166, 177, 0.585);
+    font-size: 10px;
+    margin: 2px 0px 2px 2px;
+
+}
+
+@media (min-width: 270px) and (max-width: 425px) {
+   
+
+    #logout-icon {
+        width: 20px;
+    }
+    #user-icon {
+        width: 20px;
+    }
+    .flex-wrap {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        overflow-y: scroll;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+h1 {
+    color: white;
+    font-size: 25px;
+    margin: 0%;
+}
+
+
+
+
+#main-ul {
+    width: 210px;
+    background-color: rgba(255, 255, 255, 0.27);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+    }

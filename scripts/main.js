@@ -16,9 +16,9 @@ const unsubscribe = onSnapshot(q, (querySnapshot) => {
    
 
    div.innerHTML += `
-   <ul>
-   <li onclick="clickedUserUid('${data.uid}')" > ${data.name}</li>
-   <li> ${data.email}</li>
+   <ul id="main-ul">
+   <li id="li-name" onclick="clickedUserUid('${data.uid}')" > ${data.name}</li>
+   <li id="li-email"> ${data.email}</li>
    </ul>
    `
    

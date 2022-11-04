@@ -1,31 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../scripts/firebaseconfig.js" type="module"></script>
     <link rel="stylesheet" href="../styel sheets/message.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Chat Time</title>
 </head>
+
 <body>
-    <div class="header">
-        <h1 id="name"></h1>
-        <p id="email"></p>
+
+
+
+
+
+
+    <div class="main-wrap">
+        <div class="main-square">
+            <header>
+                <!-- header back Option -->
+                <div class="header-left">
+                    <a href="./main.html"><img src="../Images/home icon.png" alt="go to homepage"  id="home"></a>
+                </div>
+                <!-- header center Option -->
+                <div class="header-center">
+                    <h1 id="name">
+                        <div class="loader"></div>
+                    </h1>
+                    <div id="email">
+                    </div>
+                </div>
+                <!-- header right setting -->
+                <div class="header-right">
+                    <img src="../Images/clear gray brush icon.png" alt="clear all chats" title="Clear all conversation (permanently)"id="brush">
+                </div>
+
+
+                </header>
+            <div class="flex-wrap">
+
+                <div class="chat-message-box">
+                    <ul id="ul"></ul>
+                </div>
+
+                
+                <div class="div"></div>
+
+
+            </div>
+
+
+
+            <div class="add">
+                <input type="text" id="textInput" class="input-box">
+                <button id="sendChat"> <i class="material-icons"  style="font-size: 30px; color:white"> send</i></button>
+            </div>
+        </div>
     </div>
-    <div class="hero">
-       <div class="chat-message-box">
-           <ul id="ul"></ul>
-       </div>
-
-
-
-
-<div class="add">
-
-    <input type="text" id="textInput"><button id="sendChat">send</button>
-</div>
+    <div>
     </div>
+
+
+
+
+
 
 
 
@@ -34,4 +75,5 @@
 
     <script src="../scripts/messages.js" type="module"></script>
 </body>
+
 </html>

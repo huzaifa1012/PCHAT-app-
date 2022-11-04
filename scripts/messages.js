@@ -64,7 +64,6 @@ onAuthStateChanged(auth, (user) => {
           let data = doc.data()
           ul.innerHTML +=
             `<li>${data.user1}</li>`
-          // console.log(data.user1);
 
         });
       }
