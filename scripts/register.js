@@ -3,6 +3,10 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
 import { collection, addDoc,} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 
+// To Image 
+let profileImg = document.querySelector("#profile-image")
+profileImg = profileImg.files[0]
+
 
 
 let register = document.querySelector("#register-button")

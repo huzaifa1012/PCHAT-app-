@@ -24,6 +24,24 @@ import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https:/
         }
 
 
+        // Forget Password
+        let forgetPassword = document.querySelector("#forget-Password")
+        forgetPassword.addEventListener("click", forgetPasswordFunction)
+        function forgetPasswordFunction(){
+            const auth = getAuth();
+            sendPasswordResetEmail(auth, email)
+            .then(() => {
+    // Password reset email sent!
+    // ..
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+
+        }
+
 
 
 

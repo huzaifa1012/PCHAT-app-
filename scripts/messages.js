@@ -1,6 +1,6 @@
 import { auth, db, app } from "./firebaseconfig.js";
-import { collection, query, where, onSnapshot, addDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+import { collection, query, where, onSnapshot, addDoc,doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 
 const uids = (user1, user2) => {
@@ -36,10 +36,8 @@ onAuthStateChanged(auth, (user) => {
     uids(user1, user2)
     getChats()
   } else {
-    alert("Please Sign in First")
+    location="../index.html"
   }
-
-
 
   async function addChats() {
     const docRef = await addDoc(collection(db, "messages"), {
@@ -51,10 +49,6 @@ onAuthStateChanged(auth, (user) => {
   sendChat.addEventListener("click", addChats)
   // console.log(user1, user2)
 
-
-
-
-  
   function getChats() {
     const q = query(collection(db, "messages"), where("uid", "==", printUid));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -84,3 +78,19 @@ const unsubscribe = onSnapshot(q, (querySnapshot) => {
   });
 });
 // Head Complete
+
+
+
+
+
+
+
+
+
+
+/////   Clear conversation  / 
+let clearChat = document.querySelector("#brush")
+clearChat.addEventListener("click", clearChatFunction) 
+ async function clearChatFunction () {
+  
+}

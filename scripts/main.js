@@ -27,8 +27,7 @@ const unsubscribe = onSnapshot(q, (querySnapshot) => {
   });
 });
   } else {
-    // User is signed out
-    // ...
+    location="../index.html"
   }
 });
 
@@ -37,7 +36,27 @@ function clickedUserUid(userUid){
   location="../pages/messages.html"
 
 }
-
-
-
 window.clickedUserUid = clickedUserUid
+
+
+let logOut = document.querySelector("#logout-icon")
+logOut.addEventListener('click',logOutUserFunction)
+function logOutUserFunction () {
+  // const auth = getAuth();
+  const user = auth.currentUser;
+auth.signOut().then(() =>{
+  console.log("logged Out").then(
+    ()=> {
+      location="../index.html"
+    }
+  )
+}
+
+)
+  
+
+    
+
+}
+
+
